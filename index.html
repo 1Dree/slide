@@ -3,76 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Slide</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div id="slide">
-      <div id="slide-items">
-        <div class="slide-item" id="firstItem">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laborum vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
+      <div id="slide-content">
+        <div id="content-items">
+          <div class="slide-item">
+            <img src="https://picsum.photos/id/70/2000" alt="" />
+          </div>
+
+          <div class="slide-item">
+            <img src="https://picsum.photos/id/71/2000" alt="" />
+          </div>
+
+          <div class="slide-item">
+            <img src="https://picsum.photos/id/72/2000" alt="" />
+          </div>
+
+          <div class="slide-item">
+            <img src="https://picsum.photos/id/73/2000" alt="" />
+          </div>
         </div>
 
-        <div class="slide-item">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laboru4m vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
-        </div>
+        <div id="slide-btns">
+          <i class="fas fa-chevron-left" id="previous"></i>
 
-        <div class="slide-item" id="lastItem">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laborum vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
-        </div>
-
-        <div class="slide-item" id="lastItem">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laborum vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
-        </div>
-
-        <div class="slide-item" id="lastItem">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laborum vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
-        </div>
-
-        <div class="slide-item" id="lastItem">
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-            eligendi! Deleniti laborum vero unde facere praesentium quisquam
-            blanditiis at totam.
-          </p>
+          <i class="fas fa-chevron-right" id="next"></i>
         </div>
       </div>
 
-      <div id="slide-btns">
-        <button id="previous" class="cta">previous</button>
-
-        <button id="next" class="cta">next</button>
-      </div>
-
-      <p id="slide-map"></p>
+      <div id="slide-map"></div>
     </div>
+
+    <footer>
+      <p>
+        Projeto inspirado no video do canal
+        <a
+          href="https://www.youtube.com/watch?v=hF_VMWnsY00&t=406s"
+          target="_blank"
+          >Bonieky Lacerda</a
+        >
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -5,36 +5,126 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  align-content: center;
+  justify-items: center;
 
   height: 100vh;
+  background-color: rgb(39, 39, 39);
 }
 
 #slide {
+  display: flex;
+  flex-direction: column;
+
+  width: 700px;
+  height: 400px;
   overflow-x: hidden;
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-#slide #slide-items {
+#content-items,
+.slide-item,
+.slide-item img {
+  width: 100%;
+  height: 100%;
+}
+
+#slide #slide-content {
+  position: relative;
+
+  margin: 0 auto;
+  overflow-x: hidden;
+  border: 3px solid #ccc;
+}
+
+#slide-content #content-items {
   display: flex;
 
-  width: 100%;
-  margin-bottom: 30px;
   transition: transform 0.6s;
 }
 
-#slide-items .slide-item {
+#content-items .slide-item {
   flex: none;
-
-  width: 100%;
-  padding: 30px;
 }
 
-#slide #slide-btns,
-#slide p#slide-map {
+.slide-item img {
+  object-fit: cover;
+}
+
+#slide-btns {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: opacity 0.3s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+#slide-btns:hover {
+  opacity: 1;
+}
+
+#slide-btns i {
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+  transition: text-shadow 0.3s;
+}
+
+#slide-btns i#next:hover {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+#slide-btns i#previous:hover {
+  text-shadow: -2px -2px 10px rgba(0, 0, 0, 0.9);
+}
+
+#slide-map {
+  display: inline-flex;
+  justify-content: center;
+
+  width: 100%;
+  padding: 10px 0;
+}
+
+#slide-map span {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  background-color: rgb(121, 121, 121);
+}
+
+#slide-map span.current {
+  background-color: #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+footer {
   text-align: center;
+  color: white;
+  padding: 30px 0;
+}
+
+footer p a {
+  color: lightblue;
 }
